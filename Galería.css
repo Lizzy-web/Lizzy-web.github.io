@@ -1,0 +1,69 @@
+/* Estilo básico para la galería */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #4585ca, #39c1e7, #79d3ece5);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #000000;
+    font-family: "Pacifico", cursive;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Para que las imágenes se ajusten automáticamente */
+    gap: 20px;
+}
+
+/* Estilo de cada item en la galería */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que las imágenes se recorten bien si no tienen las mismas proporciones */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Hace un pequeño zoom en la imagen cuando se pasa el cursor sobre ella */
+}
+
+/* Estilo del botón de regreso */
+.btn-regreso {
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px;    /* Distancia desde la parte inferior */
+    right: 20px;     /* Distancia desde el lado derecho */
+    padding: 10px 15px; /* Tamaño del botón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: Arial, sans-serif; /* Fuente */
+    font-size: 14px; /* Tamaño del texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: background-color 0.3s ease; /* Animación al pasar el cursor */
+}
+
+.btn-regreso:hover {
+    background-color: #0056b3;
+}
